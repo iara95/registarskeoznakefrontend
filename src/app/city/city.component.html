@@ -1,0 +1,23 @@
+<div class="container" style="margin-top: 5%;">
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Zip</th>
+            <th colspan="2">Functions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let city of cityArray">
+            <td>{{city.name}}</td>
+            <td>{{city.zip}}</td>
+            <td>
+              <button class="btn btn-secondary" (click)="onEdit(city.id)">Edit</button>
+            </td>
+            <td>
+              <button class="btn btn-danger" (click)="deleteCity(city.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
